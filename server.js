@@ -1,4 +1,4 @@
-const { title, content, MaterialMatters, CaseTitle, CaseNature, CaseStatus, FinancialImpact, LegalDevelopments, NewLicenses, RisksAndMitigations, ContractChanges, IPActivity, EthicsNotices } = req.body;
+const { title, content, MaterialMatters, CaseTitle, CaseNature, CaseStatus, LegalDevelopments, NewLicenses, RisksAndMitigations, ContractChanges, IPActivity, EthicsNotices } = req.body;
 
 const doc = new Document({
   sections: [
@@ -12,7 +12,6 @@ const doc = new Document({
         new Paragraph({ text: "Case Title: " + CaseTitle }),
         new Paragraph({ text: "Nature of Proceedings: " + CaseNature }),
         new Paragraph({ text: "Status: " + CaseStatus }),
-        new Paragraph({ text: "Financial Impact: " + FinancialImpact }),
         new Paragraph({ text: "Legal Developments: " + LegalDevelopments }),
         new Paragraph({ text: "New Licenses: " + NewLicenses }),
         new Paragraph({ text: "Risks & Mitigations: " + RisksAndMitigations }),
